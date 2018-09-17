@@ -3,33 +3,32 @@ body{
     padding: 0;
     text-align: center;
 }
-.bg{    
-    width: 100%;
+div{
+    width: 30%;
     height: 0;
-    padding-bottom: 100%;
-    .block{
-        width: 30%;
-        height: 0;
-        padding-bottom:  30%;
-        background-color: #fea600;
-        border-radius: 5%;
-        float: left;
-        margin-left: 2.5%;
-        margin-top: 2.5%;
-    }
+    padding-bottom:  30%;
+    background-color: #fea600;
+    border-radius: 5%;
+    float: left;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
 }
-input{
-    width: 98%;
-    height: 50px;
+button{
+    clear:both;
+    width:95%;
+    height:50px;
+    border-radius:10px;
+    position:relative;
+    margin-top: 20px;
+    background-color: #fff;    
     border: 1px solid #fea600;
-    border-radius: 3px;    
-    margin-bottom: 10px;
-}
-#button1{
-    background-color: #ee9900;
-    color: #fff;
-}
-#button2{
-    background-color: #fff;
     color: #fea600;
 }
+button:hover{
+    background-color: #fea600;
+    color: #fff;
+}
+button:focus{
+    outline: none; 
+}
+   
