@@ -6,12 +6,15 @@ btnone.onclick = function(){
     c = setInterval(function(){
         start();
     },1000)
+    btnone.disabled = true;
 }
 btntwo.onclick = function(){
     end();
     clearInterval(c);
+    btnone.disabled = false;
+
 }
-function start(){
+function start(){   
     for(var i=0;i<div.length;i++){
         div[i].style.backgroundColor = "#fea600";
     }
@@ -38,6 +41,7 @@ function start(){
     function colors(){
         return '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).substr(-6); 
     }
+    
 }
 function end(){
     for(var i=0;i<div.length;i++){
