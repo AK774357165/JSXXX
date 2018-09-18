@@ -1,0 +1,213 @@
+$blue:#29bde0;
+$lightblue:#b9e9f5;
+$orange:#fbb435;
+$black:#464646;
+@mixin item {
+    width: 23%;
+    height: 0;
+    padding-bottom: 23%;
+    margin-right: 2%;
+    float: left;
+    background-size: cover;
+}
+body{
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    background-color: $blue;
+    text-align: center;
+    z-index: 99;
+    .menu{
+        background-image: url(../img/css_sprites.png);
+        width: 19px;
+        height: 20px;
+        background-position: -56px -179px;
+        float: left;
+        margin-left: 12px;
+        margin-top: 10px;
+    }
+    .title{
+        font-size: 16px;
+        color: #fff;
+        line-height: 40px;
+        font-weight: bold;
+    }
+    .close{
+        background-image: url(../img/css_sprites.png);
+        width: 18px;
+        height: 18px;
+        background-position: -95px -179px;
+        float: right;
+        margin-right: 12px;
+        margin-top: 11px;
+    }
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: $blue;
+    margin-top: 40px;
+    .radio-box{
+        background-color: $blue;
+        height: 18vw;
+
+        .radio-box-top{
+            background-color: $lightblue;
+            height: 13vw;
+            color: $black;
+            padding-left: 13%;
+            position: relative;
+            p{
+                margin: 0;
+                font-size: 4vw;
+                line-height: 13vw;
+                display: inline-block;
+            }
+            a{
+                display: inline-block;
+                width: 7vw;
+                height: 7vw;
+                background-image: url(../img/投票_11.png);
+                background-size: cover;
+                position: absolute;
+                right: 0;
+                top: 29%;
+                margin-top: -3px;
+                margin-right: 10px;
+            }
+            audio{
+                display: inline-block;
+                margin: auto;
+                width: 25vw;
+                top: 53%;
+                margin-top: -31px;
+                margin-right: 0.3%;
+                opacity: 0;
+                transform: scale(-1,1);
+                position: absolute;
+                right: 0;
+            }
+        }
+        .radio-box-bottom{
+            height: 0;
+            width: 0;
+            border-width: 8px 5px 8px 5px;
+            border-style: solid;
+            border-color: $lightblue $blue $blue $blue;
+            float: left;
+            margin-left: 15%;
+        }
+    }
+    .tip{
+        color: #fff;
+        font-size: 3.5vw;
+        background-color: $blue;
+        padding-left: 15%;
+        padding-bottom: 4vw;
+    }
+    .choose{
+        padding-left: 4%;
+        padding-right: 4%;
+        background-color: $blue;
+        .row{
+            height: 40vw;
+            display: flex;
+            .head-btn{
+                flex: 1;
+                padding-left: 15px;
+                padding-right: 15px;      
+            }   
+            .head{
+                width: 100%;
+                height: 0;
+                padding-bottom: 100%;
+                background-color: #fff;  
+                position: relative;  
+                margin-bottom: 3vh;        
+                .center{
+                    width: 96%;
+                    height: 0;
+                    padding-bottom: 96%;
+                    background-color: #f5c97b;
+                    display: inline-block;
+                    position: absolute;
+                    left: 2%;
+                    top: 2%;
+                }
+                .id{
+                    color:$black;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 19vw;
+                    font-size: 6vw;
+                }
+                .num{
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 20%;
+                    background-color: #83b09a;
+                    color: #fff;
+                    position: absolute;
+                    bottom: 0;
+                    font-size: 3vw;
+                    text-align: center;
+                }
+            }
+            .submenu{
+                width: 100%;
+                height: 0;
+                padding-bottom: 23%;
+                background-color: $blue;
+                margin-left: auto;
+                margin-right: auto;
+                display: none;
+                .item1{
+                    @include item();
+                    background-image: url(../img/投票_24.png);
+                }
+                .item2{
+                    @include item();
+                    background-image: url(../img/投票_26.png);
+                }
+                .item3{
+                    @include item();
+                    background-image: url(../img/投票_28.png);
+                }
+                .item4{
+                    @include item();
+                    background-image: url(../img/投票_30.png);
+                }
+            }
+            .head-btn:hover .submenu{
+                display: block;
+            }
+        }
+    }
+    .push{
+        height: 95px;
+        margin-bottom: -95px;
+    }
+}
+footer{
+    width: 100%;
+    height: 95px;
+    background-color: $blue;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    .choose-die{
+        height: 44px;
+        width: 70%;
+        font-size: 15px;
+        display: inline-block;
+        background-color: $orange;
+        color: #fff;
+        margin-top: 27px;
+        font-weight: bold;
+        line-height: 44px;
+    }
+}

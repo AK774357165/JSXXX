@@ -1,0 +1,198 @@
+@charset "UTF-8";
+body {
+  margin: 0; }
+
+header {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  background-color: #29bde0;
+  text-align: center;
+  z-index: 99; }
+  header .menu {
+    background-image: url(../img/css_sprites.png);
+    width: 19px;
+    height: 20px;
+    background-position: -56px -179px;
+    float: left;
+    margin-left: 12px;
+    margin-top: 10px; }
+  header .title {
+    font-size: 16px;
+    color: #fff;
+    line-height: 40px;
+    font-weight: bold; }
+  header .close {
+    background-image: url(../img/css_sprites.png);
+    width: 18px;
+    height: 18px;
+    background-position: -95px -179px;
+    float: right;
+    margin-right: 12px;
+    margin-top: 11px; }
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: #29bde0;
+  margin-top: 40px; }
+  main .radio-box {
+    background-color: #29bde0;
+    height: 18vw; }
+    main .radio-box .radio-box-top {
+      background-color: #b9e9f5;
+      height: 13vw;
+      color: #464646;
+      padding-left: 13%;
+      position: relative; }
+      main .radio-box .radio-box-top p {
+        margin: 0;
+        font-size: 4vw;
+        line-height: 13vw;
+        display: inline-block; }
+      main .radio-box .radio-box-top a {
+        display: inline-block;
+        width: 7vw;
+        height: 7vw;
+        background-image: url(../img/投票_11.png);
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 29%;
+        margin-top: -3px;
+        margin-right: 10px; }
+      main .radio-box .radio-box-top audio {
+        display: inline-block;
+        margin: auto;
+        width: 25vw;
+        top: 53%;
+        margin-top: -31px;
+        margin-right: 0.3%;
+        opacity: 0;
+        transform: scale(-1, 1);
+        position: absolute;
+        right: 0; }
+    main .radio-box .radio-box-bottom {
+      height: 0;
+      width: 0;
+      border-width: 8px 5px 8px 5px;
+      border-style: solid;
+      border-color: #b9e9f5 #29bde0 #29bde0 #29bde0;
+      float: left;
+      margin-left: 15%; }
+  main .tip {
+    color: #fff;
+    font-size: 3.5vw;
+    background-color: #29bde0;
+    padding-left: 15%;
+    padding-bottom: 4vw; }
+  main .choose {
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: #29bde0; }
+    main .choose .row {
+      height: 40vw;
+      display: flex; }
+      main .choose .row .head-btn {
+        flex: 1;
+        padding-left: 15px;
+        padding-right: 15px; }
+      main .choose .row .head {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        background-color: #fff;
+        position: relative;
+        margin-bottom: 3vh; }
+        main .choose .row .head .center {
+          width: 96%;
+          height: 0;
+          padding-bottom: 96%;
+          background-color: #f5c97b;
+          display: inline-block;
+          position: absolute;
+          left: 2%;
+          top: 2%; }
+        main .choose .row .head .id {
+          color: #464646;
+          font-weight: bold;
+          text-align: center;
+          line-height: 19vw;
+          font-size: 6vw; }
+        main .choose .row .head .num {
+          width: 100%;
+          height: 0;
+          padding-bottom: 20%;
+          background-color: #83b09a;
+          color: #fff;
+          position: absolute;
+          bottom: 0;
+          font-size: 3vw;
+          text-align: center; }
+      main .choose .row .submenu {
+        width: 100%;
+        height: 0;
+        padding-bottom: 23%;
+        background-color: #29bde0;
+        margin-left: auto;
+        margin-right: auto;
+        display: none; }
+        main .choose .row .submenu .item1 {
+          width: 23%;
+          height: 0;
+          padding-bottom: 23%;
+          margin-right: 2%;
+          float: left;
+          background-size: cover;
+          background-image: url(../img/投票_24.png); }
+        main .choose .row .submenu .item2 {
+          width: 23%;
+          height: 0;
+          padding-bottom: 23%;
+          margin-right: 2%;
+          float: left;
+          background-size: cover;
+          background-image: url(../img/投票_26.png); }
+        main .choose .row .submenu .item3 {
+          width: 23%;
+          height: 0;
+          padding-bottom: 23%;
+          margin-right: 2%;
+          float: left;
+          background-size: cover;
+          background-image: url(../img/投票_28.png); }
+        main .choose .row .submenu .item4 {
+          width: 23%;
+          height: 0;
+          padding-bottom: 23%;
+          margin-right: 2%;
+          float: left;
+          background-size: cover;
+          background-image: url(../img/投票_30.png); }
+      main .choose .row .head-btn:hover .submenu {
+        display: block; }
+  main .push {
+    height: 95px;
+    margin-bottom: -95px; }
+
+footer {
+  width: 100%;
+  height: 95px;
+  background-color: #29bde0;
+  position: fixed;
+  bottom: 0;
+  text-align: center; }
+  footer .choose-die {
+    height: 44px;
+    width: 70%;
+    font-size: 15px;
+    display: inline-block;
+    background-color: #fbb435;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 27px;
+    font-weight: bold;
+    line-height: 44px; }
+
+/*# sourceMappingURL=vote.css.map */
