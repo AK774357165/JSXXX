@@ -1,0 +1,1 @@
+var simple = document.getElementById("simple");
