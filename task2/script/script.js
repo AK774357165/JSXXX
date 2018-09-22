@@ -17,9 +17,13 @@ function march(){
     var n = get_num();
     var killer;
     var police;
-    var shooter = 1;
-    var doctor = 1;
     var man;
+    var kil = document.getElementsByName('kil');
+    var doc = document.getElementsByName('doc');
+    var sho = document.getElementsByName('sho');
+    var pol = document.getElementsByName('pol');
+    var men = document.getElementsByName('men');
+    var loop = [kil,doc,sho,pol,men];
     if(n<5){
         return 0;
     }else if(n<9){
@@ -31,13 +35,16 @@ function march(){
     }else{
         killer = Math.ceil(n/4);
     }
-    alert(killer);
     if(n<9){
         police = 1;
     }else{
-        police = killer - 1;
+        police = killer - 1;    
     }
-    alert(police);
-    man = n - killer - police -shooter - doctor;
-    alert(man);
+    man = n - killer - police - 1 - 1;      
+    var loop2 = [killer,1,1,police,man];  
+    for(var i=0;i<loop.length;i++){
+        for(var j=0;j<loop[i].length;j++){
+            loop[i][j].value = loop2[i];
+        }
+    }
 }

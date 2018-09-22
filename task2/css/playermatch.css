@@ -83,9 +83,18 @@ main {
               background-color: #fbb435; }
             main .player-match .item2 .player ul li .blue {
               background-color: #29bde0; }
-            main .player-match .item2 .player ul li #number {
+            main .player-match .item2 .player ul li .number {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              outline: none;
+              border: 0;
+              padding: 0;
               margin-left: 10px;
-              margin-right: 10px; }
+              margin-right: 10px;
+              width: 20px;
+              background-color: #fbfbfb; }
+            main .player-match .item2 .player ul li .number::-webkit-input-placeholder {
+              color: #a1a1a1; }
     main .player-match a {
       text-decoration: none;
       color: #29bde0;
