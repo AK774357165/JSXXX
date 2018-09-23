@@ -26,23 +26,23 @@
                     <ul>
                         <li>
                             <div id="killer" class="yellow"></div> 杀 &nbsp 手
-                            <input type="text" class="number" name="kil" placeholder="0" disabled>人
+                            <input type="text" class="number" name="kil" onblur="total(this);" value="0">人
                         </li>
                         <li>
                             <div id="doctor" class="blue"></div> 医 &nbsp 生
-                            <input type="text" class="number" name="doc" placeholder="0" disabled>人
+                            <input type="text" class="number" name="doc" onblur="total(this);" value="0">人
                         </li>
                         <li>
                             <div id="shooter" class="yellow"></div> 狙击手
-                            <input type="text" class="number" name="sho" placeholder="0" disabled>人
+                            <input type="text" class="number" name="sho" onblur="total(this);" value="0">人
                         </li>
                         <li>
                             <div id="police" class="blue"></div> 警 &nbsp 察
-                            <input type="text" class="number" name="pol" placeholder="0" disabled>人
+                            <input type="text" class="number" name="pol" onblur="total(this);" value="0">人
                         </li>
                         <li>
                             <div id="man" class="yellow"></div> 水 &nbsp 民
-                            <input type="text" class="number" name="men" placeholder="0" disabled>人
+                            <input type="text" class="number" name="men" onblur="total(this);" value="0">人
                         </li>
                     </ul>
                 </div>
@@ -50,27 +50,27 @@
                     <ul>
                         <li>
                             <div id="killer" class="yellow"></div> 杀 &nbsp 手
-                            <input type="text" class="number" name="kil" placeholder="0" disabled>人
+                            <input type="text" class="number" name="kil" placeholder="0" >人
                         </li>
                         <li>
                             <div id="doctor" class="blue"></div> 医 &nbsp 生
-                            <input type="text" class="number" name="doc" placeholder="0" disabled>人
+                            <input type="text" class="number" name="doc" placeholder="0" >人
                         </li>
                         <li>
                             <div id="shooter" class="yellow"></div> 狙击手
-                            <input type="text" class="number" name="sho" placeholder="0" disabled>人
+                            <input type="text" class="number" name="sho" placeholder="0" >人
                         </li>
                         <li>
                             <div id="police" class="blue"></div> 警 &nbsp 察
-                            <input type="text" class="number" name="pol" placeholder="0" disabled>人
+                            <input type="text" class="number" name="pol" placeholder="0" >人
                         </li>
                         <li>
                             <div id="man" class="yellow"></div> 水 &nbsp 民
-                            <input type="text" class="number" name="men" placeholder="0" disabled>人
+                            <input type="text" class="number" name="men" placeholder="0" >人
                         </li>
                     </ul>
                 </div>
-                <a href="" id="set" onclick="">点击设置 <span></span></a>
+                <a href="" id="set" onclick="set_able();">点击设置 <span></span></a>
             </div>
         </div>
         <div class="words">
@@ -79,7 +79,7 @@
         </div>
         <div class="player-number">
             <div class="player">玩家人数
-                <input type="text" placeholder="0" id="num"> 人
+                <input type="text" value="0" id="num" onblur="get_num();"> 人
             </div>
             <div class="scoller">
                 <button hre class="mins">-</button>
@@ -99,7 +99,7 @@
         <div class="push"></div>
     </main>
     <footer>
-        <a href="javascript:void(0);" class="deal" onclick="march()">去发牌</a>
+        <a href="javascript:void(0);" class="deal" onclick="player_random();">去发牌</a>
     </footer>
     <script src="./script/script.js"></script>
 </body>

@@ -107,9 +107,6 @@ main{
                             width: 20px;
                             background-color: #fbfbfb;
                         }
-                        .number::-webkit-input-placeholder{
-                            color: #a1a1a1;
-                        }
                     }
                 }
             }
@@ -175,9 +172,6 @@ main{
                 color: #fbb435;
                 margin-left: 10px;
                 margin-right: 10px;
-            }
-            #num::-webkit-input-placeholder{
-                color: #fbb435;
             }
         }
         .scoller{

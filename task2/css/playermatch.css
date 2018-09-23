@@ -93,8 +93,6 @@ main {
               margin-right: 10px;
               width: 20px;
               background-color: #fbfbfb; }
-            main .player-match .item2 .player ul li .number::-webkit-input-placeholder {
-              color: #a1a1a1; }
     main .player-match a {
       text-decoration: none;
       color: #29bde0;
@@ -149,8 +147,6 @@ main {
         color: #fbb435;
         margin-left: 10px;
         margin-right: 10px; }
-      main .player-number .player #num::-webkit-input-placeholder {
-        color: #fbb435; }
     main .player-number .scoller {
       position: relative;
       text-align: center; }
