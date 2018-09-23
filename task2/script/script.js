@@ -1,8 +1,23 @@
+//跳转到游戏界面
 function jp_simple(){
-    window.location.href="playermatch.html";
+    window.location.href = "playermatch.html";
 }
+//返回函数
 function back(){
     window.history.back(-1);
+}
+//返回主界面
+function back_index(){
+    window.location.href = "index.html";
+}
+//跳转到身份卡页面
+function jp_identity(){
+    var check = document.getElementById('num');
+    if(check == 0){
+        alert("请先输入人数！");
+        return false;
+    }
+    window.location.href = "identity.html";
 }
 //获取并判断游戏人数是否合格
 function get_num(){
@@ -98,3 +113,4 @@ function player_random(){
     }   
     return player;
 }
+//变换卡片
