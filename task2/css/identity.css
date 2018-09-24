@@ -45,7 +45,7 @@ main {
   main .card-wrap {
     width: 70%;
     max-width: 300px;
-    padding-bottom: 150px;
+    height: 450px;
     margin: auto;
     background-color: #ffedc5;
     border: 3px solid #fff;
@@ -69,6 +69,20 @@ main {
         color: #f56b81; }
     main .card-wrap img {
       margin-top: 100px; }
+    main .card-wrap #chapter {
+      color: #29bde0;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px; }
+    main .card-wrap #reminder {
+      width: 90%;
+      margin: auto;
+      font-size: 16px;
+      color: #fbb435;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: left;
+      display: none; }
   main .push {
     height: 100px; }
 
@@ -92,5 +106,7 @@ footer {
     font-size: 20px;
     line-height: 85px;
     margin-top: 10px; }
+  footer div:hover {
+    cursor: pointer; }
 
 /*# sourceMappingURL=identity.css.map */

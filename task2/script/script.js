@@ -12,18 +12,20 @@ function back_index(){
 }
 //跳转到身份卡页面
 function jp_identity(){
-    var check = document.getElementById('num');
+    var check = document.getElementById('num').value;
     if(check == 0){
         alert("请先输入人数！");
         return false;
     }
+    player_random();
     window.location.href = "identity.html";
 }
 //获取并判断游戏人数是否合格
 function get_num(){
     var n = document.getElementById('num').value;
-    if(n<5||n>18){
-        alert("请输入有效人数，请输入4-18间任意整数");
+    var regx = /^\d{1,2}$/;
+    if(!regx.test(n)||n<5||n>18){
+        alert("请输入5-18间任意整数");
         return 0;
     }else{
         march(n);
@@ -111,6 +113,5 @@ function player_random(){
         player[i] = player[m];
         player[m] = t;
     }   
-    return player;
+    sessionStorage.setItem('arr',JSON.stringify(player));//上传分配结果
 }
-//变换卡片
