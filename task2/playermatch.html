@@ -26,23 +26,23 @@
                     <ul>
                         <li>
                             <div id="killer" class="yellow"></div> 杀 &nbsp 手
-                            <input type="text" class="number" name="kil" onblur="total(this);" value="0">人
+                            <input type="text" class="number" name="kil" onblur="total(this);" value="1">人
                         </li>
                         <li>
                             <div id="doctor" class="blue"></div> 医 &nbsp 生
-                            <input type="text" class="number" name="doc" onblur="total(this);" value="0">人
+                            <input type="text" class="number" name="doc" onblur="total(this);" value="1">人
                         </li>
                         <li>
                             <div id="shooter" class="yellow"></div> 狙击手
-                            <input type="text" class="number" name="sho" onblur="total(this);" value="0">人
+                            <input type="text" class="number" name="sho" onblur="total(this);" value="1">人
                         </li>
                         <li>
                             <div id="police" class="blue"></div> 警 &nbsp 察
-                            <input type="text" class="number" name="pol" onblur="total(this);" value="0">人
+                            <input type="text" class="number" name="pol" onblur="total(this);" value="1">人
                         </li>
                         <li>
                             <div id="man" class="yellow"></div> 水 &nbsp 民
-                            <input type="text" class="number" name="men" onblur="total(this);" value="0">人
+                            <input type="text" class="number" name="men" onblur="total(this);" value="1">人
                         </li>
                     </ul>
                 </div>
@@ -50,49 +50,42 @@
                     <ul>
                         <li>
                             <div id="killer" class="yellow"></div> 杀 &nbsp 手
-                            <input type="text" class="number" name="kil" placeholder="0" >人
+                            <input type="text" class="number" name="kil" onblur="total(this);" value="1">人
                         </li>
                         <li>
                             <div id="doctor" class="blue"></div> 医 &nbsp 生
-                            <input type="text" class="number" name="doc" placeholder="0" >人
+                            <input type="text" class="number" name="doc" onblur="total(this);" value="1">人
                         </li>
                         <li>
                             <div id="shooter" class="yellow"></div> 狙击手
-                            <input type="text" class="number" name="sho" placeholder="0" >人
+                            <input type="text" class="number" name="sho" onblur="total(this);" value="1">人
                         </li>
                         <li>
                             <div id="police" class="blue"></div> 警 &nbsp 察
-                            <input type="text" class="number" name="pol" placeholder="0" >人
+                            <input type="text" class="number" name="pol" onblur="total(this);" value="1">人
                         </li>
                         <li>
                             <div id="man" class="yellow"></div> 水 &nbsp 民
-                            <input type="text" class="number" name="men" placeholder="0" >人
+                            <input type="text" class="number" name="men" onblur="total(this);" value="1">人
                         </li>
                     </ul>
                 </div>
                 <a href="" id="set" onclick="set_able();">点击设置 <span></span></a>
             </div>
         </div>
+        
         <div class="words">
             <div class="words1">水民词组</div>
             <div class="words1">幽灵词组</div>
         </div>
         <div class="player-number">
             <div class="player">玩家人数
-                <input type="text" value="0" id="num" blur="get_num();"> 人
+                <input type="text" value="5" id="num" onchange="get_num();"> 人
             </div>
             <div class="scoller">
-                <button hre class="mins">-</button>
-                <div>
-                    <div class="line-bottom"></div>
-                    <button class="button">
-                        <span>|</span>
-                        <span>|</span>
-                        <span>|</span>
-                    </button>
-                    <div class="line-top"></div>
-                </div>
-                <button class="plus">+</button>
+                <button id="mins" onclick="mins();">-</button>
+                <input type="range" id="slideblock" min="5" max="18" onchange="move_change();">
+                <button id="plus" onclick="adds();">+</button>
             </div>
             <div class="placehold"></div>
         </div>

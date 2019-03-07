@@ -165,40 +165,31 @@ main {
         color: #fbb435; }
       main .player-number .scoller button:focus {
         outline: none; }
-      main .player-number .scoller .mins {
+      main .player-number .scoller #mins {
         left: 2%;
         line-height: 23px; }
-      main .player-number .scoller .plus {
+      main .player-number .scoller #plus {
         line-height: 25px;
         right: 2%; }
-      main .player-number .scoller div {
-        width: 70%;
-        display: inline-block; }
-        main .player-number .scoller div .line-bottom {
-          height: 2px;
-          width: 100%;
-          background-color: #fbb435;
-          float: left; }
-        main .player-number .scoller div .button {
-          position: absolute;
-          width: 60px;
-          height: 36px;
-          border-radius: 5px;
-          border: 2px solid #fbb435;
-          color: #fbb435;
-          font-size: 20px;
-          font-weight: bold;
-          background-color: #fff;
-          top: -5px;
-          left: 50%;
-          z-index: 999;
-          margin-left: -30px; }
-        main .player-number .scoller div .line-top {
-          height: 2px;
-          width: 35%;
-          background-color: #ffe6be;
-          position: absolute;
-          left: 50%; }
+      main .player-number .scoller #slideblock {
+        width: 75%;
+        display: inline-block;
+        margin-top: 5px;
+        -webkit-appearance: none; }
+      main .player-number .scoller input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 60px;
+        height: 35px;
+        border: 3px solid #fbb435;
+        border-radius: 5px;
+        margin-top: -17.5px;
+        background-image: url(../img/btn_03.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff; }
+      main .player-number .scoller input[type="range"]::-webkit-slider-runnable-track {
+        height: 2px;
+        background-color: #ffe6be; }
     main .player-number .placehold {
       height: 28px; }
   main .push {

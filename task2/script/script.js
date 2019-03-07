@@ -29,6 +29,7 @@ function get_num(){
         return 0;
     }else{
         march(n);
+        document.getElementById('slideblock').value = n;
     }
 }
 //计算相应游戏人数时的各个角色数量
@@ -74,11 +75,13 @@ function set_able(){
         elements[i].removeAttribute('readOnly',true);
     }
 }
+
 //自动修改游戏总人数
 function total(element){   
     var old_num = document.getElementById('num').value;
     var new_num = Number(old_num) + Number(element.value);
     document.getElementById('num').value = new_num;
+    document.getElementById('slideblock').value = new_num;
 }
 //分配角色
 function allot(){
@@ -114,4 +117,36 @@ function player_random(){
         player[m] = t;
     }   
     sessionStorage.setItem('arr',JSON.stringify(player));//上传分配结果
+}
+//增加减少按钮函数
+function mins(){
+    var n = document.getElementById('num').value;
+    if(n<=5){
+        return false;
+    }else{
+        document.getElementById('num').value--;
+        document.getElementById('slideblock').value--;
+        march(document.getElementById('num').value);
+    }
+}
+function adds(){
+    var n = document.getElementById('num').value; 
+    if(n>=18){
+        return false;
+    }else{
+        document.getElementById('num').value++;
+        document.getElementById('slideblock').value++;
+        march(document.getElementById('num').value);
+    }
+}
+//滑块位置函数
+document.getElementById('slideblock').value = document.getElementById('num').value;//获得滑块初位置
+function move_change(){
+    var n = document.getElementById('slideblock').value;
+    document.getElementById('num').value = n;
+    if(n<5||n>18){
+        alert("请输入5-18之间的整数");
+        return 0;
+    }
+    march(document.getElementById('num').value);
 }

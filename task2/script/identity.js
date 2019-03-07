@@ -50,9 +50,15 @@ function praseBtn1(){
     }
     chapter.innerHTML = c;
     chapter.style.display = 'block';
-    i++;
-    displayNum++;
-    btnNum.innerHTML = "隐藏并传递给" + displayNum + "号";//显示下一位
+    if(i<players.length-1){
+        i++;
+        displayNum++;
+        btnNum.innerHTML = "隐藏并传递给" + displayNum + "号";//显示下一位 
+    }
+    else{
+        btnNum.innerHTML = "法官查看";          //结束循环更换按钮显示
+    }
+
 }
 //隐藏角色函数
 function praseBtn2(){
@@ -65,7 +71,9 @@ function praseBtn2(){
 //按钮函数
 var flag = true;                //设一个标识符
 function praseBtn(){
-    if(flag){
+    if(btnNum.innerHTML == "法官查看"){             //根据按钮显示判断是否已经结束循环
+        window.location.href = "vote.html";
+    }else if(flag){
         praseBtn1();
         flag = false;
     }else{
